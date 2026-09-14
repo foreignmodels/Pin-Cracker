@@ -66,9 +66,8 @@ print(f"Brute force time: {bf_time:.6f} seconds")
 print(f"Random attempts: {rg_attempts}")
 print(f"Random time: {rg_time:.6f} seconds")
 print("\nTheory vs. Simulation:")
-print(f"Expected avg attempts: {expected:.1f} (Gaussian summation: (n+1)/2)")
+print(f"Expected avg attempts: {expected:.1f} (Expected Guesses: (n+1)/2)")
 print("\nMonte Carlo check:")
-for num_trials in (10, 100, 1000):
+for num_trials in (10, 100, 1000, 3000, 5000):
     bf_avg, rg_avg = run_trials(num_trials, 10000)
     print(f"{num_trials:>5} trials -> brute force avg: {bf_avg:>8.1f}   random avg: {rg_avg:>8.1f}")
-print(f"Expected AVG: {expected:>8.1f}")
